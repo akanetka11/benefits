@@ -4,10 +4,10 @@ import React from 'react';
 import { DiscountDetail } from '@screens/DiscountDetail';
 import DiscountsStack from './DiscountsStack';
 import { useSelector } from 'react-redux';
-import { getCategoryId } from '@store/slices/Discounts';
 import { FireIcon, FireInactiveIcon } from 'src/assets';
 import categories from '@config/categories.json';
 import CategoriesTabBar from '@components/CategoriesTabBar';
+import { getCategoryId } from '@store/slices/Category';
 const MainStackNav = createStackNavigator<MainStackParamList>();
 
 const MainStack = (): React.ReactElement => {

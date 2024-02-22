@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { FlatList, ListRenderItemInfo, StyleSheet, View } from 'react-native';
+import { FlatList, ListRenderItemInfo, StyleSheet } from 'react-native';
 import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
 import Text, { TextWeight } from '@components/Text';
 import { useSelector } from 'react-redux';

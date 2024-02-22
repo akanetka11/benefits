@@ -12,9 +12,9 @@ import Text, { TextWeight } from './Text';
 import { useNavigation } from '@react-navigation/native';
 import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAppDispatch } from '../hooks';
-import { getCategoryId, setCategoryId } from '../store/slices/Discounts';
 import { useSelector } from 'react-redux';
 import { DiscountsNavigationProps, DiscountsRoutes } from '@shared/const/routerDiscounts';
+import { getCategoryId, setCategoryId } from '@store/slices/Category';
 
 type CategoryType = {
   id: number;
@@ -65,7 +65,7 @@ const CategoriesTabBar: React.FC<CategoriesTabBarProps> = ({ data }) => {
   const styles = getStyles(insets);
 
   const navigation = useNavigation<DiscountsNavigationProps>();
-  
+
   const activeCategoryId = useSelector(getCategoryId);
 
   const scrollViewRef = useRef<FlatList>(null);

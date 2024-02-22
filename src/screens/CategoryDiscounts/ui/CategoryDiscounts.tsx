@@ -2,11 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { MainScreenProps, MainStackRoutes } from '@shared/const/routerMain';
 import { useSelector } from 'react-redux';
-import {
-  getCategoryId,
-  getDiscounts,
-  updateFavoriteStatus,
-} from '@store/slices/Discounts';
+import { getDiscounts, updateFavoriteStatus } from '@store/slices/Discounts';
 import CategoryDiscountCard from './CategoryDiscountCard';
 import { DiscountsType } from '@store/types/Discounts.types';
 import { DiscountItemType } from '@shared/types';
@@ -16,6 +12,7 @@ import Text, { TextWeight } from '@components/Text';
 import { CompositeScreenProps } from '@react-navigation/native';
 import { FlatList } from 'react-native-gesture-handler';
 import { DiscountsRoutes, DiscountsScreenProps } from '@shared/const/routerDiscounts';
+import { getCategoryId } from '@store/slices/Category';
 
 type NavigationProps = CompositeScreenProps<
   DiscountsScreenProps<DiscountsRoutes.CategoryDiscounts>,

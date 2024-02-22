@@ -17,7 +17,6 @@ import { useAppDispatch } from '../../../hooks';
 import {
   getDiscounts,
   getNewDiscounts,
-  setCategoryId,
   setDiscounts,
   setNewDiscounts,
 } from '@store/slices/Discounts';
@@ -27,6 +26,7 @@ import ViewMoreCard from './components/ViewMoreCard';
 import { useFocusEffect } from '@react-navigation/core';
 import { CompositeScreenProps } from '@react-navigation/native';
 import { DiscountsRoutes, DiscountsScreenProps } from '@shared/const/routerDiscounts';
+import { setCategoryId } from '@store/slices/Category';
 
 type NavigationProps = CompositeScreenProps<
   DiscountsScreenProps<DiscountsRoutes.Home>,

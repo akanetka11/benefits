@@ -16,14 +16,9 @@ const DiscountDetail: React.FC<NavigationProps> = ({ navigation }) => {
   };
   return (
     <View style={styles.container}>
-      <View style={styles.flexContainer}>
-        <TouchableOpacity onPress={goBack}>
-          <Image source={ArrowIcon} style={styles.icon} />
-        </TouchableOpacity>
-        <Text fontSize={22} weight={TextWeight.Medium}>
-          Детальная страница скидки
-        </Text>
-      </View>
+      <TouchableOpacity onPress={goBack}>
+        <Image source={ArrowIcon} style={styles.icon} />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -37,11 +32,6 @@ const getStyles = (insets: EdgeInsets) =>
     icon: {
       width: 20,
       height: 20,
-      marginRight: 16,
-    },
-    flexContainer: {
-      flexDirection: 'row',
-      alignItems: 'center',
     },
   });
 
