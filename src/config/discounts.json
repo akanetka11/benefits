@@ -1,0 +1,169 @@
+{
+  "discounts": [
+    {
+      "id": 1,
+      "name": "Еда и напитки",
+      "data": [
+        {
+          "id": 0,
+          "categoryId": 1,
+          "imgUrl": "bar",
+          "name": "EMBARGO Coctail Bar",
+          "discount": "−10%",
+          "description": "Это скрытый от глаз коктейльный бар, найти который можно заглянув в центр культурной...",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 1,
+          "categoryId": 1,
+          "imgUrl": "myataLounge",
+          "name": "Мята-центр кальянная",
+          "discount": "−20% на кальяны",
+          "description": "Лаунж-бар в центре города с богатой чайной картой, авторскими коктейлями и кальяном",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 2,
+          "categoryId": 1,
+          "imgUrl": "spiritBar",
+          "name": "SpiritВar (СпиритБар)",
+          "discount": "Сет бесплатно",
+          "description": "SpiritBar – это максимум свободы и подзабытый бунтарский дух 90-х на самой барной-шумной...",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 3,
+          "categoryId": 1,
+          "imgUrl": "dominosPizza",
+          "name": "Доминос Пицца",
+          "discount": "-25%",
+          "description": "Компанию Domino's Pizza основали в 1960 году в США. Сегодня эта сеть — один из мировых лидеров",
+          "isSavedToFavorites": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Здоровье",
+      "data": [
+        {
+          "id": 4,
+          "categoryId": 2,
+          "imgUrl": "evo",
+          "name": "EVO wellness club",
+          "discount": "−20%",
+          "description": "",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 5,
+          "categoryId": 2,
+          "imgUrl": "voka",
+          "name": "VOKA центр микрохирургии глаза",
+          "discount": "−10%",
+          "description": "",
+          "isSavedToFavorites": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Обучение и хобби",
+      "data": [
+        {
+          "id": 6,
+          "categoryId": 3,
+          "imgUrl": "courses",
+          "name": "Курсы иностранных языков SKYENG английский, немецкий...",
+          "discount": "до −45%",
+          "description": "",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 7,
+          "categoryId": 3,
+          "imgUrl": "robolab",
+          "name": "ROBOLAB Школа робототехники",
+          "discount": "−10%",
+          "description": "",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 8,
+          "categoryId": 3,
+          "imgUrl": "fasol",
+          "name": "FASOL музыкальная качалка",
+          "discount": "−30%",
+          "description": "",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 9,
+          "categoryId": 3,
+          "imgUrl": "onlineClass",
+          "name": "Online Class",
+          "discount": "−7%",
+          "description": "",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 10,
+          "categoryId": 3,
+          "imgUrl": "robolab",
+          "name": "ROBOLAB Школа робототехники",
+          "discount": "−10%",
+          "description": "",
+          "isSavedToFavorites": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Красота",
+      "data": [
+        {
+          "id": 11,
+          "categoryId": 4,
+          "imgUrl": "hq",
+          "name": "Салон красоты HQ ",
+          "discount": "до −5%",
+          "description": "Салон красоты HQ – уникальный креативный салон в Минске с невероятной атмосферой, сервисом и максимальным комфортом. ",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 12,
+          "categoryId": 4,
+          "imgUrl": "hey",
+          "name": "Hey Beauty",
+          "discount": "−10%",
+          "description": "Салон твоей красоты в самом центре Минска. Услуги в 4 руки за 2 часа (запись только по телефону).",
+          "isSavedToFavorites": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Спорт",
+      "data": [
+        {
+          "id": 13,
+          "categoryId": 5,
+          "imgUrl": "gym",
+          "name": "Фитнес-клуб «Gym24",
+          "discount": "до −45%",
+          "description": "",
+          "isSavedToFavorites": false
+        },
+        {
+          "id": 14,
+          "categoryId": 5,
+          "imgUrl": "gymExpress",
+          "name": "Gym Express",
+          "discount": "−10%",
+          "description": "Фитнес-клуб нового поколения. На площади клуба 1400 м2 расположено 130 современных тренажеров для ваших эффективных тренировок. ",
+          "isSavedToFavorites": false
+        }
+      ]
+    }
+  ]
+}
