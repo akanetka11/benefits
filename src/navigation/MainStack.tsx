@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { MainStackParamList, MainStackRoutes } from '@shared/const/routerMain';
 import React from 'react';
-import { DiscountDetail } from '@screens/DiscountDetail/ui';
+import { DiscountDetail } from '@screens/DiscountDetail';
 import DiscountsStack from './DiscountsStack';
 import { useSelector } from 'react-redux';
 import { getCategoryId } from '@store/slices/Discounts';
