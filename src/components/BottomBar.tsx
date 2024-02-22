@@ -11,6 +11,7 @@ import { colors } from '../styles';
 import bottomBarConfig from '@config/bottom-bar';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { BottomBarStackRoutes } from '@shared/const/routerBottomBar';
+import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
 
 type BottomTabProps = {
   inFocusImagePath: ImageSourcePropType;
@@ -26,22 +27,28 @@ const BottomTab: React.FC<BottomTabProps> = ({
   inFocus = false,
   nameScreen = '',
   onPress = () => {},
-}) => (
-  <TouchableOpacity activeOpacity={0.8} style={styles.tabWrapper} onPress={onPress}>
-    <View style={styles.iconWrapper}>
-      <Image source={inFocus ? inFocusImagePath : imagePath} style={styles.tabImage} />
-    </View>
-    <Text
-      color={inFocus ? colors.primary : colors.gray}
-      fontSize={12}
-      weight={TextWeight.Bold}
-    >
-      {nameScreen}
-    </Text>
-  </TouchableOpacity>
-);
+}) => {
+  const insets = useSafeAreaInsets();
+  const styles = getStyles(insets);
+  return (
+    <TouchableOpacity activeOpacity={0.8} style={styles.tabWrapper} onPress={onPress}>
+      <View style={styles.iconWrapper}>
+        <Image source={inFocus ? inFocusImagePath : imagePath} style={styles.tabImage} />
+      </View>
+      <Text
+        color={inFocus ? colors.primary : colors.gray}
+        fontSize={12}
+        weight={TextWeight.Bold}
+      >
+        {nameScreen}
+      </Text>
+    </TouchableOpacity>
+  );
+};
 
 const BottomBar: React.FC<BottomTabBarProps> = ({ state, navigation }) => {
+  const insets = useSafeAreaInsets();
+  const styles = getStyles(insets);
   const onPressTab = (tabName: BottomBarStackRoutes) => {
     navigation.navigate(tabName, { screen: tabName });
   };
@@ -62,34 +69,35 @@ const BottomBar: React.FC<BottomTabBarProps> = ({ state, navigation }) => {
   return <View style={styles.container}>{state.routes.map(renderTab)}</View>;
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: colors.white,
-    borderTopWidth: 1,
-    borderColor: colors.lightGray,
-    marginBottom: 0,
-    paddingBottom: 16,
-  },
-  tabWrapper: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 8,
-  },
-  label: {
-    marginTop: 4,
-  },
-  iconWrapper: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tabImage: {
-    width: 24,
-    height: 24,
-  },
-});
+const getStyles = (insets: EdgeInsets) =>
+  StyleSheet.create({
+    container: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      backgroundColor: colors.white,
+      borderTopWidth: 1,
+      borderColor: colors.lightGray,
+      marginBottom: 0,
+      paddingBottom: insets.bottom ? insets.bottom - 8 : 0,
+    },
+    tabWrapper: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingVertical: 6,
+    },
+    label: {
+      marginTop: 4,
+    },
+    iconWrapper: {
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    tabImage: {
+      width: 24,
+      height: 24,
+    },
+  });
 
 export default BottomBar;
