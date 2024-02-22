@@ -2,29 +2,45 @@
   "expo": {
     "name": "benefits",
     "slug": "benefits",
+    "scheme": "benefits",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/icons/splash-icon-6.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.akanetka.benefits"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/assets/icons/splash-icon-6.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.akanetka.benefits"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/assets/icons/splash-icon-6.png"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./src/assets/fonts/SF-UI-Display-Bold.ttf",
+            "./src/assets/fonts/SF-UI-Display-Medium.ttf",
+            "./src/assets/fonts/SF-UI-Display-Regular.ttf"
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "421ad20f-67bf-44db-8cfa-a183b77d8751"
+      }
     }
   }
 }
