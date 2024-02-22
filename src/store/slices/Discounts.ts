@@ -5,16 +5,12 @@ import { DiscountsState, DiscountsType } from '../types/Discounts.types';
 const initialState: DiscountsState = {
   discounts: [],
   newDiscounts: null,
-  selectedCategoryId: 0,
 };
 
 export const discountsSlice = createSlice({
   name: 'discounts',
   initialState,
   reducers: {
-    setCategoryId: (state, action: PayloadAction<number>) => {
-      state.selectedCategoryId = action.payload;
-    },
     setDiscounts: (state, action: PayloadAction<DiscountsType[]>) => {
       state.discounts = action.payload;
     },
@@ -45,10 +41,9 @@ export const discountsSlice = createSlice({
   },
 });
 
-export const { setCategoryId, setDiscounts, setNewDiscounts, updateFavoriteStatus } =
+export const { setDiscounts, setNewDiscounts, updateFavoriteStatus } =
   discountsSlice.actions;
 
-export const getCategoryId = (state: RootState) => state.discounts.selectedCategoryId;
 export const getDiscounts = (state: RootState) => state.discounts.discounts;
 export const getNewDiscounts = (state: RootState) => state.discounts.newDiscounts;
 
