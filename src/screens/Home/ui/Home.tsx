@@ -51,6 +51,7 @@ const Home: React.FC<NavigationProps> = ({ navigation }) => {
   };
 
   const getDiscountsData = () => {
+    // condition for saving state with selected discounts (because api is missing )
     if (!discounts.length) {
       dispatch(setDiscounts(data.discounts));
     }
@@ -59,12 +60,13 @@ const Home: React.FC<NavigationProps> = ({ navigation }) => {
 
   useEffect(() => {
     getDiscountsData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useFocusEffect(
     useCallback(() => {
       dispatch(setCategoryId(0));
-    }, [])
+    }, [dispatch])
   );
   return (
     <ScrollView

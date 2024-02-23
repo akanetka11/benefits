@@ -12,16 +12,14 @@ export const useFavoriteAnimation = (isSavedToFavorites: boolean) => {
   const activeIconScale = useSharedValue(activeIconValue);
   const iconScale = useSharedValue(iconValue);
 
-  const handlePressIcon = () => {
-    activeIconScale.value = withTiming(iconValue, {
-      duration: 300,
-      easing: Easing.linear,
-    });
+  const animationConfig = {
+    duration: 300,
+    easing: Easing.linear,
+  };
 
-    iconScale.value = withTiming(activeIconValue, {
-      duration: 300,
-      easing: Easing.linear,
-    });
+  const handlePressIcon = () => {
+    activeIconScale.value = withTiming(iconValue, animationConfig);
+    iconScale.value = withTiming(activeIconValue, animationConfig);
   };
 
   const activeHeartIconStyle = useAnimatedStyle(() => ({

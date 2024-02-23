@@ -19,12 +19,12 @@ export const useSplashIconAnimation = (
   const containerTranslate = useSharedValue(0);
   const opacity = useSharedValue(1);
 
-  const iconAnimationConfig = {
-    duration: 300,
-    easing: Easing.linear,
-  };
+  const handleAnimation = () => {
+    const iconAnimationConfig = {
+      duration: 300,
+      easing: Easing.linear,
+    };
 
-  const handleAnimation = useCallback(() => {
     const handleRightAnimation = withTiming(4, iconAnimationConfig);
 
     const handleLeftAnimation = withTiming(-4, iconAnimationConfig);
@@ -63,13 +63,14 @@ export const useSplashIconAnimation = (
         );
       }
     );
-  }, [offset, isEven, containerTranslate]);
+  };
 
   useEffect(() => {
     setTimeout(() => {
       handleAnimation();
     }, 1000);
-  }, [handleAnimation]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [
