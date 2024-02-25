@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native';
 import Text, { TextWeight } from './Text';
-import { colors } from '../styles';
+import { colors } from '@shared/styles';
 import bottomBarConfig from '@config/bottom-bar';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { BottomBarStackRoutes } from '@shared/const/routerBottomBar';

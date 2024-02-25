@@ -1,22 +1,22 @@
 import React from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-import { NoDataImage } from '../../../assets';
-import Text, { TextAlign, TextWeight } from '@components/Text';
-import { colors } from '@styles/index';
+import { NoDataImage } from '@assets/images';
+import { Text, TextAlign, TextWeight } from '@components/ui';
+import { colors } from '@shared/styles';
 
 const FavoritesEmptyView: React.FC = () => (
   <View style={styles.container}>
     <Image source={NoDataImage} style={styles.image} />
-    <Text fontSize={20} style={styles.title} weight={TextWeight.Bold} lineHeight={24}>
+    <Text fontSize={20} lineHeight={24} style={styles.title} weight={TextWeight.Bold}>
       Нет избранного
     </Text>
     <Text
       color={colors.gray}
       fontSize={14}
+      lineHeight={20}
+      style={styles.text}
       textAlign={TextAlign.Center}
       weight={TextWeight.Normal}
-      style={styles.text}
-      lineHeight={20}
     >
       Чтобы добавить любимые скидки, просто нажими на иконку 💙️ в карточке
     </Text>

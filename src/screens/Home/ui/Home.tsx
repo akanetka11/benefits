@@ -10,17 +10,16 @@ import {
 import data from '@config/discounts.json';
 import newData from '@config/new.json';
 import DiscountCard from './components/DiscountCard';
-import Text, { TextWeight } from '@components/Text';
-import { colors } from '../../../styles';
+import { Text, TextWeight } from '@components/ui';
+import { colors } from '@shared/styles';
 import { DiscountItemType } from '@shared/types';
-import { useAppDispatch } from '../../../hooks';
+import { useAppDispatch, useAppSelector } from '@shared/hooks';
 import {
   getDiscounts,
   getNewDiscounts,
   setDiscounts,
   setNewDiscounts,
 } from '@store/slices/Discounts';
-import { useSelector } from 'react-redux';
 import { MainScreenProps, MainStackRoutes } from '@shared/const/routerMain';
 import ViewMoreCard from './components/ViewMoreCard';
 import { useFocusEffect } from '@react-navigation/core';
@@ -36,8 +35,8 @@ type NavigationProps = CompositeScreenProps<
 const Home: React.FC<NavigationProps> = ({ navigation }) => {
   const dispatch = useAppDispatch();
 
-  const discounts = useSelector(getDiscounts);
-  const newDiscounts = useSelector(getNewDiscounts);
+  const discounts = useAppSelector(getDiscounts);
+  const newDiscounts = useAppSelector(getNewDiscounts);
 
   const onPressDiscountCard = (id: number) => {
     navigation.navigate(MainStackRoutes.DiscountDetail, {

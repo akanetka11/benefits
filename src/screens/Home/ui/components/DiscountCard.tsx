@@ -1,8 +1,8 @@
 import React from 'react';
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
-import Text, { TextWeight } from '../../../../components/Text';
-import { colors, screenWidth } from '../../../../styles';
-import { CardHeartActiveIcon, CardHeartIcon } from '../../../../assets';
+import { Text, TextWeight } from '@components/ui';
+import { colors, screenWidth } from '@shared/styles';
+import { CardHeartActiveIcon, CardHeartIcon } from '@assets/icons';
 import { DiscountItemType } from '@shared/types';
 import { images } from '@config/images';
 

@@ -1,9 +1,9 @@
 module.exports = {
+  root: true,
   extends: [
     '@react-native-community',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -34,5 +34,5 @@ module.exports = {
       },
     ],
   },
-  ignorePatterns: ['node_modules', 'babel.config.js'],
+  ignorePatterns: ['node_modules', 'babel.config.js', 'src/assets'],
 };

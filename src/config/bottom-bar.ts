@@ -4,7 +4,7 @@ import {
   SaleActiveIcon,
   SaleIcon,
   UserIcon,
-} from '../assets';
+} from '@assets/icons';
 import { ImageSourcePropType } from 'react-native';
 import { BottomBarStackRoutes } from '@shared/const/routerBottomBar';
 

@@ -1,11 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { FlatList, ListRenderItemInfo, StyleSheet } from 'react-native';
 import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
-import Text, { TextWeight } from '@components/Text';
-import { useSelector } from 'react-redux';
+import { Text, TextWeight } from '@components/ui';
 import { getFavorites, removeFavorite } from '@store/slices/Favorites';
-import CategoryDiscountCard from '../../CategoryDiscounts/ui/CategoryDiscountCard';
-import { useAppDispatch } from '@hooks/index';
+import CategoryDiscountCard from '@screens/CategoryDiscounts/ui/CategoryDiscountCard';
+import { useAppDispatch, useAppSelector } from '@shared/hooks';
 import FavoritesEmptyView from './FavoritesEmptyView';
 import { updateFavoriteStatus } from '@store/slices/Discounts';
 import { DiscountItemType } from '@shared/types';
@@ -21,7 +20,7 @@ const Favorites: React.FC = () => {
   const insets = useSafeAreaInsets();
   const styles = getStyles(insets);
 
-  const favorites = useSelector(getFavorites);
+  const favorites = useAppSelector(getFavorites);
 
   const [lastDeletedItem, setLastDeletedItem] = useState<LastDeletedItemType>(null);
   const [deletedItemHeight, setDeletedItemHeight] = useState(0);

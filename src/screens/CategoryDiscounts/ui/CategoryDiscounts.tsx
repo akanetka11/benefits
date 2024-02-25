@@ -1,14 +1,13 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { MainScreenProps, MainStackRoutes } from '@shared/const/routerMain';
-import { useSelector } from 'react-redux';
 import { getDiscounts, updateFavoriteStatus } from '@store/slices/Discounts';
 import CategoryDiscountCard from './CategoryDiscountCard';
 import { DiscountsType } from '@store/types/Discounts.types';
 import { DiscountItemType } from '@shared/types';
-import { useAppDispatch } from '../../../hooks';
+import { useAppDispatch, useAppSelector } from '@shared/hooks';
 import { addFavorite, removeFavorite } from '@store/slices/Favorites';
-import Text, { TextWeight } from '@components/Text';
+import { Text, TextWeight } from '@components/ui';
 import { CompositeScreenProps } from '@react-navigation/native';
 import { FlatList } from 'react-native-gesture-handler';
 import { DiscountsRoutes, DiscountsScreenProps } from '@shared/const/routerDiscounts';
@@ -22,8 +21,8 @@ type NavigationProps = CompositeScreenProps<
 const CategoryDiscounts: React.FC<NavigationProps> = ({ navigation }) => {
   const dispatch = useAppDispatch();
 
-  const categoryId = useSelector(getCategoryId);
-  const discounts = useSelector(getDiscounts);
+  const categoryId = useAppSelector(getCategoryId);
+  const discounts = useAppSelector(getDiscounts);
 
   const scrollViewRef = useRef<FlatList>(null);
 

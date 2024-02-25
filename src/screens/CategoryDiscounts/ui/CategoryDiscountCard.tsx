@@ -7,9 +7,9 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import { colors, screenWidth } from '@styles/index';
-import Text, { TextWeight } from '@components/Text';
-import { CardHeartActiveIcon, CardHeartIcon } from '../../../assets';
+import { colors, screenWidth } from '@shared/styles';
+import { Text, TextWeight } from '@components/ui';
+import { CardHeartActiveIcon, CardHeartIcon } from '@assets/icons';
 import { DiscountItemType } from '@shared/types';
 import Animated, {
   Easing,
@@ -19,7 +19,7 @@ import Animated, {
   withTiming,
 } from 'react-native-reanimated';
 import { images } from '@config/images';
-import { useFavoriteAnimation } from '@hooks/useFavoriteAnimation';
+import { useFavoriteAnimation } from '@shared/hooks';
 import { LastDeletedItemType } from '@screens/Favorites/ui/Favorites';
 
 type CategoryDiscountCardProps = {
@@ -156,7 +156,7 @@ const CategoryDiscountCard: React.FC<CategoryDiscountCardProps> = ({
               />
             )}
           </TouchableOpacity>
-          <Image source={images[imgUrl]} style={styles.image} resizeMode="stretch" />
+          <Image resizeMode="stretch" source={images[imgUrl]} style={styles.image} />
         </View>
         <Text style={styles.name} weight={TextWeight.Bold}>
           {name}

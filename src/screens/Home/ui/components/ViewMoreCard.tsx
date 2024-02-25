@@ -1,5 +1,5 @@
-import Text, { TextWeight } from '@components/Text';
-import { colors, screenWidth } from '@styles/index';
+import { Text, TextWeight } from '@components/ui';
+import { colors, screenWidth } from '@shared/styles';
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
@@ -9,7 +9,7 @@ type ViewMoreCardProps = {
 };
 
 const ViewMoreCard: React.FC<ViewMoreCardProps> = ({ numberOfDiscounts, onPress }) => (
-  <TouchableOpacity style={styles.container} onPress={onPress} activeOpacity={1}>
+  <TouchableOpacity activeOpacity={1} style={styles.container} onPress={onPress}>
     <Text color={colors.gray} fontSize={14} weight={TextWeight.Bold}>
       Смотреть ещё {numberOfDiscounts}
     </Text>

@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import { StyleProp, StyleSheet, Text, TextStyle } from 'react-native';
 
-import { colors } from '../styles';
+import { colors } from '@shared/styles';
 
 export enum TextWeight {
   Normal = 'Regular',

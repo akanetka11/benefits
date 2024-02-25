@@ -10,16 +10,44 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@screens/*": ["src/screens/*"],
-      "@store/*": ["src/store/*"],
-      "@navigation/*": ["src/navigation/*"],
-      "@shared/*": ["src/shared/*"],
-      "@config/*": ["src/config/*"],
-      "@hooks/*": ["src/hooks/*"],
-      "@utils/*": ["src/utils/*"],
-      "@styles/*": ["src/styles/*"]
-    }
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@screens/*": [
+        "src/screens/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@navigation/*": [
+        "src/navigation/*"
+      ],
+      "@shared/*": [
+        "src/shared/*"
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@hooks/*": [
+        "src/shared/hooks/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@styles/*": [
+        "src/shared/styles/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ]
+    },
+    "types": [
+      "node"
+    ]
   },
-  "include": ["**/*.ts", "**/*.tsx", "declaration.d.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "declaration.d.ts"
+  ]
 }

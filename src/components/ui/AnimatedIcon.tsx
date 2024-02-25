@@ -1,4 +1,4 @@
-import { useSplashIconAnimation } from '@hooks/useSplashIconAnimation';
+import { useSplashIconAnimation } from '@shared/hooks';
 import React from 'react';
 import { Image, ImageSourcePropType, StyleSheet } from 'react-native';
 import Animated from 'react-native-reanimated';

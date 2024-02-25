@@ -3,15 +3,15 @@ import { MainStackParamList, MainStackRoutes } from '@shared/const/routerMain';
 import React from 'react';
 import { DiscountDetail } from '@screens/DiscountDetail';
 import DiscountsStack from './DiscountsStack';
-import { useSelector } from 'react-redux';
-import { FireIcon, FireInactiveIcon } from 'src/assets';
+import { FireIcon, FireInactiveIcon } from '@assets/icons';
 import categories from '@config/categories.json';
-import CategoriesTabBar from '@components/CategoriesTabBar';
+import { CategoriesTabBar } from '@components/ui';
 import { getCategoryId } from '@store/slices/Category';
+import { useAppSelector } from '@shared/hooks';
 const MainStackNav = createStackNavigator<MainStackParamList>();
 
 const MainStack = (): React.ReactElement => {
-  const selectedCategoryId = useSelector(getCategoryId);
+  const selectedCategoryId = useAppSelector(getCategoryId);
   return (
     <MainStackNav.Navigator initialRouteName={MainStackRoutes.DiscountsStack}>
       <MainStackNav.Screen

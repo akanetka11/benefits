@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnimatedIcon, Text } from './components';
+import { AnimatedIcon, Text, TextWeight } from '@components/ui';
 import { StyleSheet, View } from 'react-native';
 import {
   SplashIcon1,
@@ -10,8 +10,7 @@ import {
   SplashIcon6,
   SplashIcon7,
   SplashIcon8,
-} from './assets';
-import { TextWeight } from '@components/Text';
+} from '@assets/icons';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 
 const SplashScreen: React.FC = () => {

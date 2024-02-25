@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import bottomBarConfig from '../config/bottom-bar';
-import BottomBar from '@components/BottomBar';
+import bottomBarConfig from '@config/bottom-bar';
+import { BottomBar } from '@components/ui';
 import screens from '../screens';
 import MainStack from './MainStack';
 

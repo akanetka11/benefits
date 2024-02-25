@@ -7,12 +7,11 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from 'react-native';
-import { colors } from '../styles';
+import { colors } from '@shared/styles';
 import Text, { TextWeight } from './Text';
 import { useNavigation } from '@react-navigation/native';
 import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useAppDispatch } from '../hooks';
-import { useSelector } from 'react-redux';
+import { useAppDispatch, useAppSelector } from '@shared/hooks';
 import { DiscountsNavigationProps, DiscountsRoutes } from '@shared/const/routerDiscounts';
 import { getCategoryId, setCategoryId } from '@store/slices/Category';
 
@@ -66,7 +65,7 @@ const CategoriesTabBar: React.FC<CategoriesTabBarProps> = ({ data }) => {
 
   const navigation = useNavigation<DiscountsNavigationProps>();
 
-  const activeCategoryId = useSelector(getCategoryId);
+  const activeCategoryId = useAppSelector(getCategoryId);
 
   const scrollViewRef = useRef<FlatList>(null);
 

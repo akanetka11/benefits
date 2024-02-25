@@ -1,9 +1,8 @@
-import Text, { TextWeight } from '@components/Text';
 import { MainScreenProps, MainStackRoutes } from '@shared/const/routerMain';
 import React from 'react';
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
-import { ArrowIcon } from 'src/assets';
+import { ArrowIcon } from '@assets/icons';
 
 type NavigationProps = MainScreenProps<MainStackRoutes.DiscountDetail>;
 

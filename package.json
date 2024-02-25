@@ -7,9 +7,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "lint": "eslint **/*.{ts,tsx}",
-    "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
-    "format": "prettier --write src/**/*.{ts,tsx}"
+    "lint": "eslint 'src/**/*' --ext .ts,.tsx",
+    "lint:fix": "eslint 'src/**/*' --ext .ts,.tsx --fix",
+    "format": "prettier --write 'src/**/*' --ext .ts,.tsx --ignore-path .prettierignore"
   },
   "dependencies": {
     "eslint": "^8.19.0",

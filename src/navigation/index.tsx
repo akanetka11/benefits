@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { RootParamList, RootRoutes } from '@shared/const/routerRoot';
 import BottomTabNavigator from './BottomBar';
-import { colors } from '@styles/index';
+import { colors } from '@shared/styles';
 import React from 'react';
 
 const RootStack = createStackNavigator<RootParamList>();

@@ -1,4 +1,4 @@
-import Text, { TextWeight } from '@components/Text';
+import { Text, TextWeight } from '@components/ui';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { EdgeInsets, useSafeAreaInsets } from 'react-native-safe-area-context';
